@@ -14,15 +14,16 @@ import java.util.List;
 @Service
 public class AddressService implements AddressInterface {
 
-    @Autowired
+
     private AddressRepository addressRepository;
-    @Autowired
+
     private ModelMapper modelMapper;
 
 
 
-    public AddressService() {
-
+    public AddressService(AddressRepository addressRepository, ModelMapper modelMapper) {
+        this.addressRepository = addressRepository;
+        this.modelMapper = modelMapper;
     }
 
     @Override

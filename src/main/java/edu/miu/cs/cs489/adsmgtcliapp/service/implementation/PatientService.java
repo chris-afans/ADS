@@ -15,12 +15,14 @@ import java.util.List;
 @Service
 public class PatientService implements PatientServiceInterface {
 
-    @Autowired
+
     private PatientRepository patientRepository;
-    @Autowired
+
     private ModelMapper modelMapper;
 
-    public PatientService() {
+    public PatientService(PatientRepository patientRepository, ModelMapper modelMapper) {
+        this.patientRepository = patientRepository;
+        this.modelMapper = modelMapper;
 
     }
 
